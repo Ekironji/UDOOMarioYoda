@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Luigi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-3b6912d50afa86c7e4442e885800155bfb893043.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\classes-52f665ced78a729152626d57a82b4ac6a5c94a7c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\gson-2.3-869e33c0e41077600631398e1be95b7ce43ee361.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\libs\adktoolkit-0.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d5dede12c6641ce78bb875a79c7652d403f44fc8">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\adktoolkit-0.2.0-5beae33929dc19dc4486f8331f347cd294dcc916.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\classes-6099b447e28ca527b7e222eb3ebb5fe4a068e0b7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\UDOOMarioYoda\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-b2ee40d24cc653fcad1d4d61104ff1de673b2d18.jar" />
+    </item>
+
+</items>
