@@ -82,8 +82,8 @@ public class MainActivity extends Activity {
 	private ArrayList<String> starwars_strings = new ArrayList<String>(Arrays.asList("star wars", "fight",
 			"combatti", "Jedi", "gedi", "jedi", "guerre stellari" ));
 	private ArrayList<String> robinhood_strings = new ArrayList<String>(Arrays.asList("foreste illegali"));
-	private ArrayList<String> fare_strings = new ArrayList<String>(Arrays.asList("puoi fare", "fare"));
-	private ArrayList<String> spada_strings = new ArrayList<String>(Arrays.asList("spada", "light", "saber", "sword", "taglia"));
+	private ArrayList<String> fare_strings = new ArrayList<String>(Arrays.asList("puoi fare", "fare", "can you do", "do something"));
+	private ArrayList<String> spada_strings = new ArrayList<String>(Arrays.asList("spada", "light", "saber", "sword", "taglia", "cut"));
 	private ArrayList<String> allwords = new ArrayList<String>();
 	
 	// gui
@@ -186,8 +186,9 @@ public class MainActivity extends Activity {
 	            public void onInit(int status) {
 	            	if (status == TextToSpeech.SUCCESS) {
 	       			 
-	                    int result = tts.setLanguage(Locale.ITALIAN);
-	                    tts.setPitch(0.4F);
+//	                    int result = tts.setLanguage(Locale.ITALIAN);
+						int result = tts.setLanguage(Locale.ENGLISH);
+	                    tts.setPitch(0.5F);
 						tts.setSpeechRate(0.9F);
 	         
 	                    if (result == TextToSpeech.LANG_MISSING_DATA) {
@@ -197,8 +198,10 @@ public class MainActivity extends Activity {
 	                            installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
 	                            startActivity(installIntent);          
 	                    } else {
-	                    	tts.speak("Che la forza sia con te!!", TextToSpeech.QUEUE_FLUSH, null);
-	                    }
+//	                    	tts.speak("Che la forza sia con te!!", TextToSpeech.QUEUE_FLUSH, null);
+							tts.speak("May the force be with u do!!", TextToSpeech.QUEUE_FLUSH, null);
+
+						}
 	         
 	                } else {
 	                    Log.e("TTS", "Initilization Failed!");          
@@ -267,12 +270,13 @@ public class MainActivity extends Activity {
 					if (hi_strings.contains(stringFounded)) sendHello();
 					else if (hello_strings.contains(stringFounded)) sendHello();
 					else if (name_strings.contains(stringFounded))
-						tts.speak("Yoda il mio nome è. Con iuduu fatto io sono.", TextToSpeech.QUEUE_FLUSH, null);
+//						tts.speak("Yoda il mio nome è. Con iuduu fatto io sono.", TextToSpeech.QUEUE_FLUSH, null);
+						tts.speak("Yoda my name is. Powered with u do i am.", TextToSpeech.QUEUE_FLUSH, null);
 					else if (comefrom_strings.contains(stringFounded))
 						tts.speak("I come from Siena in Italy", TextToSpeech.QUEUE_FLUSH, null);
 					else if (goodboy_strings.contains(stringFounded)) sendGoodCase();
 					else if (fare_strings.contains(stringFounded)) sendGoodCase();
-					else if (badboy_strings.contains(stringFounded)) starWarsCase();
+					else if (badboy_strings.contains(stringFounded)) fuckyouCase();
 					else if (cuteboy_strings.contains(stringFounded)) sendCuteCase();
 					else if (forward_strings.contains(stringFounded))
 						mAdkManager.writeSerial(FORWARD_SENDSTRING);
@@ -301,7 +305,8 @@ public class MainActivity extends Activity {
 	private void spadaCase() {
 		Log.i(TAG, "star_wars_theme case");
 		setNewFace(R.drawable.yoda_triste);
-		tts.speak("In guardia Pàdwan", TextToSpeech.QUEUE_FLUSH, null);
+//		tts.speak("In guardia Pàdwan", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("on guard Pàdwan", TextToSpeech.QUEUE_FLUSH, null);
 		mAdkManager.writeSerial(CUTEBOY_SENDSTRING);
 		lightsaber.play();
 		returnToNormalState(6000);
@@ -310,17 +315,30 @@ public class MainActivity extends Activity {
     private void starWarsCase() {
     	Log.i(TAG, "star_wars_theme case");
     	setNewFace(R.drawable.yoda_triste);
-		tts.speak("Potente tu sei diventato, Il Lato Oscuro percepisco in te", TextToSpeech.QUEUE_FLUSH, null);
+//		tts.speak("Potente tu sei diventato, Il Lato Oscuro percepisco in te", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("Powerful you have become, the dark side I sense in you", TextToSpeech.QUEUE_FLUSH, null);
 		mAdkManager.writeSerial(STARWARS_SENDSTRING);
 		star_wars_theme.play();
 		lightsaber.play();
 		returnToNormalState(6000);
     }
+
+	private void fuckyouCase() {
+		Log.i(TAG, "star_wars_theme case");
+		setNewFace(R.drawable.yoda_triste);
+//		tts.speak("Potente tu sei diventato, Il Lato Oscuro percepisco in te", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("Feel the force!", TextToSpeech.QUEUE_FLUSH, null);
+		mAdkManager.writeSerial(STARWARS_SENDSTRING);
+		star_wars_theme.play();
+		lightsaber.play();
+		returnToNormalState(6000);
+	}
     
     private void sendHello() {
     	Log.i(TAG, "hello case");  
     	setNewFace(R.drawable.yoda_felice);
-    	tts.speak("Che la forza sia con te", TextToSpeech.QUEUE_FLUSH, null);
+//    	tts.speak("Che la forza sia con te", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("May the force be with u do!!", TextToSpeech.QUEUE_FLUSH, null);
 		mAdkManager.writeSerial(HELLO_SENDSTRING);
 		returnToNormalState(5000);
     }
@@ -336,7 +354,8 @@ public class MainActivity extends Activity {
     private void sendGoodCase() {
     	Log.i(TAG, "good case");  
     	setNewFace(R.drawable.yoda_felice);
-		tts.speak("Fare o non fare, non c'è provare!", TextToSpeech.QUEUE_FLUSH, null);
+//		tts.speak("Fare o non fare, non c'è provare!", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("Do or do not: there is no try!", TextToSpeech.QUEUE_FLUSH, null);
 		mAdkManager.writeSerial(GOODBOY_SENDSTRING);
 		returnToNormalState(5000);
     }
@@ -392,8 +411,8 @@ public class MainActivity extends Activity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, this.getPackageName());
 		intent.putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true);
-//		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
-		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "it_IT");
+		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+//		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "it_IT");
     	
         mSpeechRecognizer.startListening(intent);        
         new CountDownTimer(5000, 1000) {
@@ -459,7 +478,8 @@ public class MainActivity extends Activity {
 		        debug_tv.setText("Received text: " + resultsArray.get(0));
 		        
 		        if (!searchCommands(resultsArray)) {
-		        	tts.speak("Molto da apprendere ancora tu hai!", TextToSpeech.QUEUE_FLUSH, null);
+//		        	tts.speak("Molto da apprendere ancora tu hai!", TextToSpeech.QUEUE_FLUSH, null);
+					tts.speak(" Much to learn you still have my young padawan", TextToSpeech.QUEUE_FLUSH, null);
 		        	//showToastMessage("Sentence is not recognized");
 		        }
 		        
